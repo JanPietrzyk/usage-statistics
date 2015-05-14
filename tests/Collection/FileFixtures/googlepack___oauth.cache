@@ -1,0 +1,76 @@
+array (
+  'package' => 
+  array (
+    'name' => 'googlepack/oauth',
+    'description' => NULL,
+    'time' => '2013-06-13T02:57:22+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'taqmaninw',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-master' => 
+      array (
+        'name' => 'googlepack/oauth',
+        'description' => '',
+        'keywords' => 
+        array (
+        ),
+        'homepage' => '',
+        'version' => 'dev-master',
+        'version_normalized' => '9999999-dev',
+        'license' => 
+        array (
+        ),
+        'authors' => 
+        array (
+          0 => 
+          array (
+            'name' => 'taqmaninw',
+            'email' => 'taqmaninw@gmail.com',
+          ),
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/taqmaninw/google-oauth.git',
+          'reference' => '08b87fdcc95f66d2dcbe2a7db9e2e6a3ba96b1a9',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/taqmaninw/google-oauth/zipball/08b87fdcc95f66d2dcbe2a7db9e2e6a3ba96b1a9',
+          'reference' => '08b87fdcc95f66d2dcbe2a7db9e2e6a3ba96b1a9',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2013-06-13T03:00:25+00:00',
+        'autoload' => 
+        array (
+          'psr-0' => 
+          array (
+            'Googlepack\\Oauth' => 'src/',
+          ),
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.3.0',
+          'illuminate/support' => '4.0.x',
+        ),
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/taqmaninw/google-oauth',
+    'downloads' => 
+    array (
+      'total' => 2,
+      'monthly' => 0,
+      'daily' => 0,
+    ),
+    'favers' => 0,
+  ),
+)

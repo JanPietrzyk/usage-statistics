@@ -1,0 +1,89 @@
+array (
+  'package' => 
+  array (
+    'name' => 'google/auth',
+    'description' => 'Google Auth Library for PHP',
+    'time' => '2015-04-24T19:00:25+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'stanley-cheung',
+      ),
+      1 => 
+      array (
+        'name' => 'tbetbetbe',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-master' => 
+      array (
+        'name' => 'google/auth',
+        'description' => 'Google Auth Library for PHP',
+        'keywords' => 
+        array (
+          0 => 'Authentication',
+          1 => 'oauth2',
+          2 => 'google',
+        ),
+        'homepage' => 'http://github.com/google/google-auth-library-php',
+        'version' => 'dev-master',
+        'version_normalized' => '9999999-dev',
+        'license' => 
+        array (
+          0 => 'Apache-2.0',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/google/google-auth-library-php.git',
+          'reference' => 'aefc5889197445a742c2af855af5248b0f9de2b9',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/google/google-auth-library-php/zipball/aefc5889197445a742c2af855af5248b0f9de2b9',
+          'reference' => 'aefc5889197445a742c2af855af5248b0f9de2b9',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2015-05-13T21:30:21+00:00',
+        'autoload' => 
+        array (
+          'classmap' => 
+          array (
+            0 => 'src/',
+          ),
+          'psr-4' => 
+          array (
+            'Google\\Auth\\' => 'src',
+          ),
+        ),
+        'require' => 
+        array (
+          'guzzlehttp/guzzle' => '5.2.*',
+          'firebase/php-jwt' => '2.0.0',
+          'php' => '>=5.4',
+        ),
+        'require-dev' => 
+        array (
+          'phpunit/phpunit' => '3.7.*',
+          'phplint/phplint' => '0.0.1',
+        ),
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/google/google-auth-library-php',
+    'downloads' => 
+    array (
+      'total' => 85,
+      'monthly' => 85,
+      'daily' => 1,
+    ),
+    'favers' => 1,
+  ),
+)

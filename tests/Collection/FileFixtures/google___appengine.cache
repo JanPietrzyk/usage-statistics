@@ -1,0 +1,87 @@
+array (
+  'package' => 
+  array (
+    'name' => 'google/appengine',
+    'description' => 'Google App Engine',
+    'time' => '2014-12-15T22:36:11+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'Daniel Yang',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-master' => 
+      array (
+        'name' => 'google/appengine',
+        'description' => 'Google App Engine',
+        'keywords' => 
+        array (
+          0 => 'google',
+        ),
+        'homepage' => 'https://cloud.google.com/appengine/',
+        'version' => 'dev-master',
+        'version_normalized' => '9999999-dev',
+        'license' => 
+        array (
+          0 => 'Apache License 2.0',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/yys0623/gae.git',
+          'reference' => 'd57503dedea49d689042f53c0c2ad219f80f184d',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/yys0623/gae/zipball/d57503dedea49d689042f53c0c2ad219f80f184d',
+          'reference' => 'd57503dedea49d689042f53c0c2ad219f80f184d',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2014-12-15T22:33:13+00:00',
+        'autoload' => 
+        array (
+          'classmap' => 
+          array (
+            0 => 'php/sdk/',
+          ),
+        ),
+        'extra' => 
+        array (
+          'branch-alias' => 
+          array (
+            'dev-master' => '1.0.x-dev',
+          ),
+        ),
+        'include-path' => 
+        array (
+          0 => 'php/sdk/',
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.2.1',
+        ),
+        'require-dev' => 
+        array (
+          'phpunit/phpunit' => '3.7.*',
+        ),
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/yys0623/gae',
+    'downloads' => 
+    array (
+      'total' => 67,
+      'monthly' => 8,
+      'daily' => 0,
+    ),
+    'favers' => 0,
+  ),
+)

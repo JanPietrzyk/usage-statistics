@@ -1,0 +1,64 @@
+array (
+  'package' => 
+  array (
+    'name' => 'google/civic-client',
+    'description' => 'Google Civic API Client',
+    'time' => '2013-07-10T18:41:46+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'Opus1no2',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-master' => 
+      array (
+        'name' => 'google/civic-client',
+        'description' => 'Google Civic API Client',
+        'keywords' => 
+        array (
+        ),
+        'homepage' => '',
+        'version' => 'dev-master',
+        'version_normalized' => '9999999-dev',
+        'license' => 
+        array (
+        ),
+        'authors' => 
+        array (
+          0 => 
+          array (
+            'name' => 'Travis Tillotson',
+            'email' => 'tillotson.travis@gmail.com',
+          ),
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/Opus1no2/Google-Civic-Client.git',
+          'reference' => 'fae11fd2b0b40e72caa364ad8f78db635d68b4f4',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/Opus1no2/Google-Civic-Client/zipball/fae11fd2b0b40e72caa364ad8f78db635d68b4f4',
+          'reference' => 'fae11fd2b0b40e72caa364ad8f78db635d68b4f4',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2013-07-10T18:40:41+00:00',
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/Opus1no2/Google-Civic-Client',
+    'downloads' => 
+    array (
+      'total' => 0,
+      'monthly' => 0,
+      'daily' => 0,
+    ),
+    'favers' => 0,
+  ),
+)

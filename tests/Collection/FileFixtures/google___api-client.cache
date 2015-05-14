@@ -1,0 +1,172 @@
+array (
+  'package' => 
+  array (
+    'name' => 'google/api-client',
+    'description' => 'PHP Client for Google APIs',
+    'time' => '2013-05-02T20:10:12+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'dancryer',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-feature/namespaces' => 
+      array (
+        'name' => 'google/api-client',
+        'description' => 'PHP Client for Google APIs',
+        'keywords' => 
+        array (
+          0 => 'php',
+          1 => 'api',
+          2 => 'client',
+          3 => 'search',
+          4 => 'analytics',
+          5 => 'google',
+          6 => 'youtube',
+          7 => 'adwords',
+          8 => 'chrome',
+          9 => 'plus',
+          10 => 'drive',
+          11 => 'adsense',
+          12 => 'compute',
+        ),
+        'homepage' => 'https://github.com/block8/google-api',
+        'version' => 'dev-feature/namespaces',
+        'version_normalized' => 'dev-feature/namespaces',
+        'license' => 
+        array (
+          0 => 'Apache-2.0',
+        ),
+        'authors' => 
+        array (
+          0 => 
+          array (
+            'name' => 'Dan Cryer',
+            'email' => 'dan@block8.co.uk',
+            'homepage' => 'http://www.block8.co.uk/',
+          ),
+          1 => 
+          array (
+            'name' => 'Google',
+            'email' => 'noreply@google.com',
+            'homepage' => 'http://www.google.com/',
+          ),
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/Block8/Google-API.git',
+          'reference' => 'a231baed3873d0811c834e359e7fa47132625373',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/Block8/Google-API/zipball/a231baed3873d0811c834e359e7fa47132625373',
+          'reference' => 'a231baed3873d0811c834e359e7fa47132625373',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2013-05-02T21:55:46+00:00',
+        'autoload' => 
+        array (
+          'psr-0' => 
+          array (
+            'Google' => 'src/Google/',
+          ),
+          'files' => 
+          array (
+            0 => 'src/External/URITemplateParser.php',
+          ),
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.3.0',
+        ),
+        'abandoned' => 'google/apiclient',
+      ),
+      '0.6.2' => 
+      array (
+        'name' => 'google/api-client',
+        'description' => 'PHP Client for Google APIs',
+        'keywords' => 
+        array (
+          0 => 'php',
+          1 => 'api',
+          2 => 'client',
+          3 => 'search',
+          4 => 'analytics',
+          5 => 'google',
+          6 => 'youtube',
+          7 => 'adwords',
+          8 => 'chrome',
+          9 => 'plus',
+          10 => 'drive',
+          11 => 'adsense',
+          12 => 'compute',
+        ),
+        'homepage' => 'https://github.com/block8/google-api',
+        'version' => '0.6.2',
+        'version_normalized' => '0.6.2.0',
+        'license' => 
+        array (
+          0 => 'Apache-2.0',
+        ),
+        'authors' => 
+        array (
+          0 => 
+          array (
+            'name' => 'Dan Cryer',
+            'email' => 'dan@block8.co.uk',
+            'homepage' => 'http://www.block8.co.uk/',
+          ),
+          1 => 
+          array (
+            'name' => 'Google',
+            'email' => 'noreply@google.com',
+            'homepage' => 'http://www.google.com/',
+          ),
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/Block8/Google-API.git',
+          'reference' => 'e7915030be37012b0c342ee8f6ec4165af3fc134',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/Block8/Google-API/zipball/e7915030be37012b0c342ee8f6ec4165af3fc134',
+          'reference' => 'e7915030be37012b0c342ee8f6ec4165af3fc134',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2013-05-02T20:07:45+00:00',
+        'autoload' => 
+        array (
+          'classmap' => 
+          array (
+            0 => 'vendor/google-api-php-client/src/',
+          ),
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.3.0',
+        ),
+        'abandoned' => 'google/apiclient',
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/Block8/Google-API.git',
+    'abandoned' => 'google/apiclient',
+    'downloads' => 
+    array (
+      'total' => 5860,
+      'monthly' => 0,
+      'daily' => 0,
+    ),
+    'favers' => 2,
+  ),
+)

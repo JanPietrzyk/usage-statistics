@@ -1,0 +1,125 @@
+array (
+  'package' => 
+  array (
+    'name' => 'google/client',
+    'description' => 'Client library for Google APIs',
+    'time' => '2013-12-13T20:20:39+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'buddhamagnet',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-master' => 
+      array (
+        'name' => 'google/client',
+        'description' => 'Client library for Google APIs',
+        'keywords' => 
+        array (
+          0 => 'google',
+        ),
+        'homepage' => 'http://developers.google.com/api-client-library/php',
+        'version' => 'dev-master',
+        'version_normalized' => '9999999-dev',
+        'license' => 
+        array (
+          0 => 'Apache-2.0',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/buddhamagnet/google-client.git',
+          'reference' => '59ce7001cbe72615b716ed11835c2508898f28a9',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/buddhamagnet/google-client/zipball/59ce7001cbe72615b716ed11835c2508898f28a9',
+          'reference' => '59ce7001cbe72615b716ed11835c2508898f28a9',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2013-12-13T21:03:06+00:00',
+        'autoload' => 
+        array (
+          'psr-0' => 
+          array (
+            'Google' => 'src',
+          ),
+        ),
+        'include-path' => 
+        array (
+          0 => 'src/',
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.2.1',
+        ),
+      ),
+      'v1.0.0-alpha' => 
+      array (
+        'name' => 'google/client',
+        'description' => 'Client library for Google APIs',
+        'keywords' => 
+        array (
+          0 => 'google',
+        ),
+        'homepage' => 'http://developers.google.com/api-client-library/php',
+        'version' => 'v1.0.0-alpha',
+        'version_normalized' => '1.0.0.0-alpha',
+        'license' => 
+        array (
+          0 => 'Apache-2.0',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/buddhamagnet/google-client.git',
+          'reference' => '889aa1e32d8d4ca5c747154aef5d9e8649ff1d0a',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/buddhamagnet/google-client/zipball/889aa1e32d8d4ca5c747154aef5d9e8649ff1d0a',
+          'reference' => '889aa1e32d8d4ca5c747154aef5d9e8649ff1d0a',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2013-11-13T16:18:16+00:00',
+        'autoload' => 
+        array (
+          'psr-0' => 
+          array (
+            'Google' => 'src',
+          ),
+        ),
+        'include-path' => 
+        array (
+          0 => 'src/',
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.2.1',
+        ),
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/buddhamagnet/google-client',
+    'downloads' => 
+    array (
+      'total' => 32,
+      'monthly' => 0,
+      'daily' => 0,
+    ),
+    'favers' => 0,
+  ),
+)

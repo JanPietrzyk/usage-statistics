@@ -1,0 +1,197 @@
+array (
+  'package' => 
+  array (
+    'name' => 'google/recaptcha',
+    'description' => 'Client library for reCAPTCHA, a free service that protect websites from spam and abuse.',
+    'time' => '2015-03-12T10:37:16+00:00',
+    'maintainers' => 
+    array (
+      0 => 
+      array (
+        'name' => 'rowan-m',
+      ),
+    ),
+    'versions' => 
+    array (
+      'dev-master' => 
+      array (
+        'name' => 'google/recaptcha',
+        'description' => 'Client library for reCAPTCHA, a free service that protect websites from spam and abuse.',
+        'keywords' => 
+        array (
+          0 => 'recaptcha',
+          1 => 'spam',
+          2 => 'captcha',
+          3 => 'Abuse',
+        ),
+        'homepage' => 'http://www.google.com/recaptcha/',
+        'version' => 'dev-master',
+        'version_normalized' => '9999999-dev',
+        'license' => 
+        array (
+          0 => 'BSD-3-Clause',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/google/recaptcha.git',
+          'reference' => '9f59175c786c2449452b40a7e7b7b7273dc28ee0',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/google/recaptcha/zipball/9f59175c786c2449452b40a7e7b7b7273dc28ee0',
+          'reference' => '9f59175c786c2449452b40a7e7b7b7273dc28ee0',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2015-04-07T13:30:35+00:00',
+        'autoload' => 
+        array (
+          'psr-4' => 
+          array (
+            'ReCaptcha\\' => 'src/ReCaptcha',
+          ),
+        ),
+        'extra' => 
+        array (
+          'branch-alias' => 
+          array (
+            'dev-master' => '1.1.x-dev',
+          ),
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.3.2',
+        ),
+        'require-dev' => 
+        array (
+          'phpunit/phpunit' => '4.5.*',
+        ),
+      ),
+      '1.1.1' => 
+      array (
+        'name' => 'google/recaptcha',
+        'description' => 'Client library for reCAPTCHA, a free service that protect websites from spam and abuse.',
+        'keywords' => 
+        array (
+          0 => 'recaptcha',
+          1 => 'spam',
+          2 => 'captcha',
+          3 => 'Abuse',
+        ),
+        'homepage' => 'http://www.google.com/recaptcha/',
+        'version' => '1.1.1',
+        'version_normalized' => '1.1.1.0',
+        'license' => 
+        array (
+          0 => 'BSD-3-Clause',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/google/recaptcha.git',
+          'reference' => '090585935d95ebdf2d16dd071b10c9179a94da47',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/google/recaptcha/zipball/090585935d95ebdf2d16dd071b10c9179a94da47',
+          'reference' => '090585935d95ebdf2d16dd071b10c9179a94da47',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2015-03-16T13:45:08+00:00',
+        'autoload' => 
+        array (
+          'psr-4' => 
+          array (
+            'ReCaptcha\\' => 'src/ReCaptcha',
+          ),
+        ),
+        'extra' => 
+        array (
+          'branch-alias' => 
+          array (
+            'dev-master' => '1.1.x-dev',
+          ),
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.3.2',
+        ),
+        'require-dev' => 
+        array (
+          'phpunit/phpunit' => '4.5.*',
+        ),
+      ),
+      '1.1.0' => 
+      array (
+        'name' => 'google/recaptcha',
+        'description' => 'Client library for reCAPTCHA, a free service that protect websites from spam and abuse.',
+        'keywords' => 
+        array (
+          0 => 'recaptcha',
+          1 => 'spam',
+          2 => 'captcha',
+          3 => 'Abuse',
+        ),
+        'homepage' => 'http://www.google.com/recaptcha/',
+        'version' => '1.1.0',
+        'version_normalized' => '1.1.0.0',
+        'license' => 
+        array (
+          0 => 'BSD-3-Clause',
+        ),
+        'authors' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'type' => 'git',
+          'url' => 'https://github.com/google/recaptcha.git',
+          'reference' => 'c800b38d17fdd932978e6c8a788d493810c01a76',
+        ),
+        'dist' => 
+        array (
+          'type' => 'zip',
+          'url' => 'https://api.github.com/repos/google/recaptcha/zipball/c800b38d17fdd932978e6c8a788d493810c01a76',
+          'reference' => 'c800b38d17fdd932978e6c8a788d493810c01a76',
+          'shasum' => '',
+        ),
+        'type' => 'library',
+        'time' => '2015-03-12T10:56:37+00:00',
+        'autoload' => 
+        array (
+          'psr-4' => 
+          array (
+            'ReCaptcha\\' => 'src/ReCaptcha',
+          ),
+        ),
+        'require' => 
+        array (
+          'php' => '>=5.3.2',
+        ),
+        'require-dev' => 
+        array (
+          'phpunit/phpunit' => '4.5.*',
+        ),
+      ),
+    ),
+    'type' => 'library',
+    'repository' => 'https://github.com/google/recaptcha',
+    'downloads' => 
+    array (
+      'total' => 3852,
+      'monthly' => 2619,
+      'daily' => 43,
+    ),
+    'favers' => 3,
+  ),
+)

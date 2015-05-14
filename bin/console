@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+if (!$loader = include __DIR__.'/../vendor/autoload.php') {
+    die('You must set up the project dependencies.');
+}
+
+define('ROOT_DIRECTORY', __DIR__ . '/..');
+
+$app = new \Cilex\Application('Cilex');
+$app->command(new \Jpietrzyk\UsageStatisticsCommand\InitAllPackages());
+$app->command(new \Jpietrzyk\UsageStatisticsCommand\GenerateStatistics());
+$app->run();
