@@ -2,4 +2,4 @@ vendor/
 stats/*
 resource/*
 composer.lock
-.idea\
+.idea/
