@@ -13,6 +13,8 @@ namespace Jpietrzyk\UsageStatisticsCommand;
 
 use Cilex\Command\Command;
 use Jpietrzyk\PackagistApiExtended\ArrayResultFactory;
+use Jpietrzyk\UsageStatistics\Handler\Init\InitHandler;
+use Jpietrzyk\UsageStatistics\Handler\Init\RawPackage;
 use Packagist\Api\Client;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -36,19 +38,25 @@ class InitAllPackages extends Command
             new ArrayResultFactory()
         );
 
+        $packageNames = $client->all();
         $resourceRoot = ROOT_DIRECTORY . '/resource';
 
+        $handler = new InitHandler($resourceRoot, count($packageNames));
 
-        foreach ($client->all() as $packageName) {
+
+        foreach ($packageNames as $packageName) {
             $output->writeln($packageName);
 
-            $package = $client->get($packageName);
-
-
-            file_put_contents(
-                $resourceRoot . '/' . str_replace('/', '___', $packageName) . '.cache',
-                var_export($package, true)
+            $rawPackage = new RawPackage(
+                $packageName,
+                (array) $client->get($packageName)
             );
+
+            $messages = $handler->addPackage($rawPackage);
+
+            foreach($messages->getMessages() as $messages) {
+                $output->writeln($messages);
+            }
         }
 
         $output->writeln('text');
