@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Jpietrzyk\UsageStatisticsTest\Collection;
+namespace Jpietrzyk\UsageStatisticsTest;
 
 use Jpietrzyk\UsageStatistics\ValueInterpreter\PHPVersionStringInterpreter;
 
-class NumericValueInterpreterTest extends \PHPUnit_Framework_TestCase
+class PHPVersionStringInterpreterTest extends \PHPUnit_Framework_TestCase
 {
 
     private $fixtures = array(

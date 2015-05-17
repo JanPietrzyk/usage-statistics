@@ -2,11 +2,14 @@
 
 
 namespace Jpietrzyk\UsageStatistics;
+use Jpietrzyk\UsageStatistics\Result\RawList;
+use Jpietrzyk\UsageStatistics\Result\RawListCollection;
+use Jpietrzyk\UsageStatistics\Result\RawListItem;
 
 /**
  * Class ListCollector
  *
- * Collect lists for a cetrain counter
+ * Collect lists for a certain counter
  *
  * @package Jpietrzyk\UsageStatistics\Collection
  */
@@ -14,12 +17,12 @@ class ListCollector
 {
 
     /**
-     * @var
+     * @var string
      */
     private $pathToSavableValue;
 
     /**
-     * @var
+     * @var string
      */
     private $pathToComparableValue;
 
@@ -101,10 +104,29 @@ class ListCollector
     }
 
     /**
-     * @return array
+     * @return RawListCollection
      */
-    public function getArrayResult()
+    public function getRawResult()
     {
-        return [$this->pathToComparableValue => $this->collectedData];
+        $ret = new RawListCollection($this->getPathToCompareValue());
+
+        foreach($this->collectedData as $listName => $list) {
+            $listResult = new RawList($listName);
+
+            foreach($list as $name => $value) {
+                $listResult->addItem(new RawListItem($name, $value));
+            }
+
+            $ret->addList($listResult);
+        }
+
+        return $ret;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPathToCompareValue() {
+        return $this->pathToComparableValue;
     }
 }

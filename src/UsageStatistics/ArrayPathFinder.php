@@ -10,7 +10,7 @@ namespace Jpietrzyk\UsageStatistics;
  *
  * @package Jpietrzyk\UsageStatistics\Collection
  */
-class ArrayPathFinder
+class ArrayPathFinder implements PathFinder
 {
     private $data;
 
@@ -69,14 +69,45 @@ class ArrayPathFinder
                 throw new \InvalidArgumentException('Path not found');
             }
 
-            if (!array_key_exists($key, $current)) {
-                throw new \InvalidArgumentException($key . ' not part of array');
-            }
-
-            $current = $current[$key];
+            $current = $this->findValue($key, $current);
         }
 
         return $current;
+    }
+
+    /**
+     * @param $key
+     * @param $current
+     * @return mixed
+     */
+    private function findValue($key, $current) {
+        $value = $this->findValueWithWildcard($key, $current);
+
+        if($value) {
+            return $value;
+        }
+
+        if (!array_key_exists($key, $current)) {
+            throw new \InvalidArgumentException($key . ' not part of array');
+        }
+
+        return $current[$key];
+    }
+
+    private function findValueWithWildcard($key, $current) {
+        if(strpos($key, self::WILDCARD) !== strlen($key) - 1) {
+            return false;
+        }
+
+        $key = substr($key, 0, strlen($key) - 1);
+
+        foreach(array_keys($current) as $possibleKey) {
+            if(0 === strpos($possibleKey, $key)) {
+                return $current[$possibleKey];
+            }
+        }
+
+        throw new \InvalidArgumentException('Nothing like "' . $key . '" found in array');
     }
 
     /**

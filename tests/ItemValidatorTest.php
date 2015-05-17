@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Jpietrzyk\UsageStatisticsTest\Collection;
+namespace Jpietrzyk\UsageStatisticsTest;
 
 use Jpietrzyk\UsageStatistics\ArrayPathFinder;
 use Jpietrzyk\UsageStatistics\Validator\ItemValidator;

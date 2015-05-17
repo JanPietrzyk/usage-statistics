@@ -45,8 +45,6 @@ class InitAllPackages extends Command
 
 
         foreach ($packageNames as $packageName) {
-            $output->writeln($packageName);
-
             $rawPackage = new RawPackage(
                 $packageName,
                 (array) $client->get($packageName)
@@ -59,6 +57,6 @@ class InitAllPackages extends Command
             }
         }
 
-        $output->writeln('text');
+        $output->writeln('DONE!');
     }
 }

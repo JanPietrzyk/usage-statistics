@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Jpietrzyk\UsageStatisticsTest\Collection;
+namespace Jpietrzyk\UsageStatisticsTest;
 
 use Jpietrzyk\UsageStatistics\ArrayPathFinder;
 
@@ -25,6 +25,12 @@ class ArrayPathFinderTest extends \PHPUnit_Framework_TestCase
                 'a',
                 'b',
                 'c'
+            ],
+            'complex' => [
+                'aaa' => 1,
+                'a' => 2,
+                'aa' => 3,
+                'b' => 4,
             ]
         ]);
     }
@@ -48,5 +54,9 @@ class ArrayPathFinderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('b', $this->pathFinder->getValue('numbers.1'));
 
         $this->assertEquals('TOP', $this->pathFinder->getValue('not.found', 'TOP'));
+    }
+
+    public function testLike() {
+        $this->assertEquals(1, $this->pathFinder->getValue('complex.a*'));
     }
 }
