@@ -31,12 +31,14 @@ class StatisticGenerator {
      */
     private $listCollectors = [];
 
+    private $inspectionCount = 0;
+
     /**
      * @param CounterInterface $counter
      * @param array $validators
      * @param array $listCollector
      */
-    public function __construct(CounterInterface $counter, array $validators, array $listCollector)
+    public function __construct(CounterInterface $counter, array $validators, array $listCollector = [])
     {
         $this->counter = $counter;
 
@@ -98,6 +100,8 @@ class StatisticGenerator {
         foreach($this->resultSet->getModified() as $value) {
            $this->notifyListCollectors($value, $pathFinder);
         }
+
+        $this->inspectionCount++;
     }
 
     /**
@@ -131,7 +135,7 @@ class StatisticGenerator {
      */
     public function getRawResult()
     {
-        $result = new RawResult($this->resultSet->getTotalCount(), $this->resultSet->getInvalidCount());
+        $result = new RawResult($this->inspectionCount, $this->resultSet->getInvalidCount());
 
         foreach ($this->listCollectors as $listCollector) {
 

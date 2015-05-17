@@ -30,7 +30,7 @@ class Calculator {
     /**
      * @var int
      */
-    private $totalCount;
+    private $ValidCount;
 
     /**
      * @var array
@@ -52,14 +52,13 @@ class Calculator {
         $this->combineUnder = (int) $combineUnder;
         $this->precision = $precision;
 
-        $this->caclculateInvalidPercentage();
         $this->calculateResult();
     }
 
     /**
      * @return int
      */
-    public function getInvalidPercentage()
+    public function getInvalidCount()
     {
         return $this->invalidPercentage;
     }
@@ -67,9 +66,9 @@ class Calculator {
     /**
      * @return int
      */
-    public function getTotalCount()
+    public function getValidCount()
     {
-        return $this->totalCount;
+        return $this->ValidCount;
     }
 
     /**
@@ -85,13 +84,13 @@ class Calculator {
      */
     private function calculateResult()
     {
-        $this->totalCount = $this->rawResult->getTotalCount();
+        $this->ValidCount = $this->rawResult->getValidCount();
 
         /** @var CalculatedResultItem[] $stock */
         $stock = [];
 
         foreach($this->rawResult->getResultItems() as $rawResultItem) {
-            $rawPercentage = ($rawResultItem->getNumberOfOccurrences() / $this->totalCount) * 100;
+            $rawPercentage = ($rawResultItem->getNumberOfOccurrences() / $this->ValidCount) * 100;
 
             if($rawPercentage < $this->combineUnder) {
                 $stock[] = new CalculatedResultItem($rawPercentage, $this->precision, $rawResultItem);
@@ -130,22 +129,4 @@ class Calculator {
             )
         );
     }
-
-    private function caclculateInvalidPercentage()
-    {
-        $invalidCnt = $this->rawResult->getInvalidCount();
-
-        if(!$invalidCnt) {
-            $this->invalidPercentage = 0;
-            return;
-        }
-
-        $rawInvalidPercentage = $invalidCnt / $this->rawResult->getTotalCount() * 100;
-        $roundedInvalidPercentage = round($rawInvalidPercentage, $this->precision->getPrecision());
-
-        $this->invalidPercentage = $this->precision->formatValue($roundedInvalidPercentage);
-
-    }
-
-
 }

@@ -10,7 +10,7 @@ class RawResult implements RawResultInterface
     /**
      * @var int
      */
-    private $totalCount;
+    private $packageCount;
 
     /**
      * @var int
@@ -28,11 +28,11 @@ class RawResult implements RawResultInterface
     private $lists = [];
 
     /**
-     * @param $totalCount
+     * @param $packageCount
      * @param $invalidCount
      */
-    public function __construct($totalCount, $invalidCount) {
-        $this->totalCount = (int) $totalCount;
+    public function __construct($packageCount, $invalidCount) {
+        $this->packageCount = (int) $packageCount;
         $this->invalidCount = (int) $invalidCount;
     }
 
@@ -53,8 +53,21 @@ class RawResult implements RawResultInterface
     /**
      * @return int
      */
-    public function getTotalCount() {
-        return $this->totalCount;
+    public function getPackageCount() {
+        return $this->packageCount;
+    }
+
+    /**
+     * @return int
+     */
+    public function getValidCount() {
+        $ret = 0;
+
+        foreach($this->resultItems as $item) {
+            $ret += $item->getNumberOfOccurrences();
+        }
+
+        return $ret;
     }
 
     /**

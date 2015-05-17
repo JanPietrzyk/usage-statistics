@@ -16,7 +16,7 @@ interface RawResultInterface
     /**
      * @return int
      */
-    public function getTotalCount();
+    public function getValidCount();
 
     /**
      * @return int
