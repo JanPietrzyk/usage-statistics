@@ -24,11 +24,6 @@ class ResultSet {
     /**
      * @var int
      */
-    private $totalCount = 0;
-
-    /**
-     * @var int
-     */
     private $invalidCount = 0;
 
     /**
@@ -41,7 +36,6 @@ class ResultSet {
      */
     public function incValue($filteredValue)
     {
-
         if (!isset($this->values[$filteredValue])) {
             $this->values[$filteredValue] = 0;
         }
@@ -49,8 +43,6 @@ class ResultSet {
         $this->values[$filteredValue]++;
 
         $this->modified[] = $filteredValue;
-
-        $this->totalCount++;
     }
 
     /**
@@ -89,14 +81,6 @@ class ResultSet {
     public function getValues()
     {
         return $this->values;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTotalCount()
-    {
-        return $this->totalCount;
     }
 
     /**

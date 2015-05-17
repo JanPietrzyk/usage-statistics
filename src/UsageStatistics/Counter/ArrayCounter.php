@@ -3,7 +3,7 @@
 
 namespace Jpietrzyk\UsageStatistics\Counter;
 
-use Jpietrzyk\UsageStatistics\ArrayPathFinder;
+use Jpietrzyk\UsageStatistics\PathFinder;
 use Jpietrzyk\UsageStatistics\ValueInterpreter\ValueInterpreter;
 
 /**
@@ -36,11 +36,11 @@ class ArrayCounter implements CounterInterface
     }
 
     /**
-     * @param ArrayPathFinder $pathFinder
+     * @param PathFinder $pathFinder
      * @param Resultset $resultSet
      * @return bool
      */
-    public function inspect(ArrayPathFinder $pathFinder, Resultset $resultSet)
+    public function inspect(PathFinder $pathFinder, Resultset $resultSet)
     {
         try {
             $values = $pathFinder->requireValue($this->path);
