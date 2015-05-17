@@ -3,7 +3,6 @@
 
 namespace Jpietrzyk\UsageStatistics\Result;
 
-
 class RawListCollection implements RawListCollectionInterface
 {
 
@@ -17,14 +16,16 @@ class RawListCollection implements RawListCollectionInterface
      */
     private $items;
 
-    public function __construct($name) {
+    public function __construct($name)
+    {
         $this->name = (string) $name;
     }
 
     /**
      * @param RawListInterface $listItem
      */
-    public function addList(RawListInterface $listItem) {
+    public function addList(RawListInterface $listItem)
+    {
         $this->items[] = $listItem;
     }
 

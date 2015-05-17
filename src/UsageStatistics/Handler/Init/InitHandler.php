@@ -3,7 +3,6 @@
 
 namespace Jpietrzyk\UsageStatistics\Handler\Init;
 
-
 use Jpietrzyk\UsageStatistics\Handler\MessageResponse;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -11,10 +10,11 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Class InitHandler
  *
  * @todo replace file handling functionality with clear interface
- * 
+ *
  * @package Jpietrzyk\UsageStatistics
  */
-class InitHandler {
+class InitHandler
+{
 
     /**
      * @var string
@@ -35,7 +35,8 @@ class InitHandler {
      * @param $path
      * @param $totalCount
      */
-    public function __construct($path, $totalCount) {
+    public function __construct($path, $totalCount)
+    {
         $this->path = (string) $path;
         $this->totalCount = (int) $totalCount;
 
@@ -54,26 +55,29 @@ class InitHandler {
     }
 
 
-    private function preparePath() {
+    private function preparePath()
+    {
         $this->checkPathExists();
         $this->removePathContents();
     }
 
-    private function checkPathExists() {
-        if(is_dir($this->path)) {
+    private function checkPathExists()
+    {
+        if (is_dir($this->path)) {
             return;
         }
 
         $success = mkdir($this->path);
 
-        if(false === $success) {
+        if (false === $success) {
             throw new \RuntimeException('Unable to create "' . $this->path . '"');
         }
     }
 
-    private function removePathContents() {
-        foreach(scandir($this->path) as $fileName) {
-            if($fileName == '.' || $fileName == '..') {
+    private function removePathContents()
+    {
+        foreach (scandir($this->path) as $fileName) {
+            if ($fileName == '.' || $fileName == '..') {
                 continue;
             }
 
@@ -81,7 +85,7 @@ class InitHandler {
 
             $success = unlink($file);
 
-            if(!$success) {
+            if (!$success) {
                 throw new \RuntimeException('Unable to remove "' . $file . '"');
             }
         }
@@ -96,19 +100,19 @@ class InitHandler {
         $response->addMessage('Storing ' . $package->getName());
         $this->writeContents($package);
         $this->updateCounterAndSleep($response);
-
     }
 
     /**
      * @param RawPackage $package
      */
-    private function writeContents(RawPackage $package) {
+    private function writeContents(RawPackage $package)
+    {
         $success = file_put_contents(
             $this->path . '/' . str_replace('/', '___', $package->getName()) . '.cache',
             var_export($package->getData(), true)
         );
 
-        if(false === $success) {
+        if (false === $success) {
             throw new \RuntimeException('Unable to write "' . $package->getName() . '"');
         }
     }
@@ -117,15 +121,16 @@ class InitHandler {
     /**
      * @param MessageResponse $response
      */
-    private function updateCounterAndSleep(MessageResponse $response) {
+    private function updateCounterAndSleep(MessageResponse $response)
+    {
         $this->cnt++;
 
-        if(0 == ($this->cnt % 200)) {
-            $response->addMessage( $this->cnt . ' of ' . $this->totalCount);
+        if (0 == ($this->cnt % 200)) {
+            $response->addMessage($this->cnt . ' of ' . $this->totalCount);
             $response->addMessage('--sleeping--');
         }
 
-        if(1 == ($this->cnt % 200)) {
+        if (1 == ($this->cnt % 200)) {
             sleep(20);
         }
     }

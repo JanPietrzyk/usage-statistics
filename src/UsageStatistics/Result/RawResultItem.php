@@ -3,7 +3,6 @@
 
 namespace Jpietrzyk\UsageStatistics\Result;
 
-
 class RawResultItem implements RawResultItemInterface
 {
 
@@ -21,7 +20,8 @@ class RawResultItem implements RawResultItemInterface
      * @param string $name
      * @param int $numberOfOccurrences
      */
-    public function __construct($name, $numberOfOccurrences) {
+    public function __construct($name, $numberOfOccurrences)
+    {
         $this->name = (string) $name;
         $this->numberOfOccurrences = (int) $numberOfOccurrences;
     }
@@ -41,7 +41,4 @@ class RawResultItem implements RawResultItemInterface
     {
         return $this->numberOfOccurrences;
     }
-
-
-
 }

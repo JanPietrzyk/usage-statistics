@@ -3,15 +3,16 @@
 
 namespace Jpietrzyk\UsageStatistics\ValueInterpreter;
 
-
-class PrefixStrip implements ValueInterpreter {
+class PrefixStrip implements ValueInterpreter
+{
 
     /**
      * @var string
      */
     private $prefix;
 
-    public function __construct($prefix) {
+    public function __construct($prefix)
+    {
         $this->prefix = (string) $prefix;
     }
 
@@ -21,7 +22,7 @@ class PrefixStrip implements ValueInterpreter {
      */
     public function getRealValue($value)
     {
-        if(0 !== strpos($value, $this->prefix)) {
+        if (0 !== strpos($value, $this->prefix)) {
             throw new \InvalidArgumentException('Can not strip non existent prefix');
         }
 

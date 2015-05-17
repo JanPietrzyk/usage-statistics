@@ -3,8 +3,8 @@
 
 namespace Jpietrzyk\UsageStatistics\Handler\Init;
 
-
-class RawPackage {
+class RawPackage
+{
 
     /**
      * @var string
@@ -20,7 +20,8 @@ class RawPackage {
      * @param $name
      * @param array $data
      */
-    public function __construct($name, array $data) {
+    public function __construct($name, array $data)
+    {
         $this->name = (string) $name;
         $this->data = $data;
     }

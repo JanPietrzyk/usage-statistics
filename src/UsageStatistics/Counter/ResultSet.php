@@ -7,7 +7,8 @@ namespace Jpietrzyk\UsageStatistics\Counter;
  * Class ResultSet
  * @package Jpietrzyk\UsageStatistics\Counter
  */
-class ResultSet {
+class ResultSet
+{
 
     /**
      * If the given path was not found in array
@@ -64,14 +65,16 @@ class ResultSet {
     /**
      * @return array recently added fields
      */
-    public function getModified() {
+    public function getModified()
+    {
         return $this->modified;
     }
 
     /**
      * reset recently added fields
      */
-    public function resetModified() {
+    public function resetModified()
+    {
         $this->modified = [];
     }
 

@@ -49,14 +49,14 @@ class ArrayKeyCounter implements CounterInterface
             return;
         }
 
-        if(!is_array($values)) {
+        if (!is_array($values)) {
             throw new \RuntimeException('Invalid path supplied');
         }
 
-        foreach(array_keys($values) as $value) {
+        foreach (array_keys($values) as $value) {
             try {
                 $value = $this->interpreter->getRealValue($value);
-            } catch(\InvalidArgumentException $e) {
+            } catch (\InvalidArgumentException $e) {
                 continue;
             }
 

@@ -1,7 +1,6 @@
 <?php
 namespace Jpietrzyk\UsageStatistics\Result;
 
-
 /**
  * Class ResultItem
  * @package Jpietrzyk\UsageStatistics\Calculator

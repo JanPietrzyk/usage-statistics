@@ -3,7 +3,6 @@ namespace Jpietrzyk\UsageStatistics\Counter;
 
 use Jpietrzyk\UsageStatistics\PathFinder;
 
-
 /**
  * Class Counter
  *

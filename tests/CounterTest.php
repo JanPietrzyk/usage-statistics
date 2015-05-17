@@ -9,7 +9,8 @@ use Jpietrzyk\UsageStatistics\Counter\ScalarValueCounter;
 use Jpietrzyk\UsageStatistics\PathFinder;
 use Jpietrzyk\UsageStatistics\ValueInterpreter\ValueInterpreter;
 
-class CounterTest extends \PHPUnit_Framework_TestCase{
+class CounterTest extends \PHPUnit_Framework_TestCase
+{
 
     private $arrayCounterFixtures = [
         ['a', 'b'],
@@ -17,12 +18,13 @@ class CounterTest extends \PHPUnit_Framework_TestCase{
         ['b', 'c']
     ];
 
-    public function testArrayCounter() {
+    public function testArrayCounter()
+    {
         $counter = new ArrayCounter('test');
         $resultSet = new ResultSet();
         $mockPathFinder = new MockPathFinder();
 
-        foreach($this->arrayCounterFixtures as $value) {
+        foreach ($this->arrayCounterFixtures as $value) {
             $mockPathFinder->value = $value;
             $counter->inspect($mockPathFinder, $resultSet);
 
@@ -54,12 +56,13 @@ class CounterTest extends \PHPUnit_Framework_TestCase{
         ],
     ];
 
-    public function testArrayKeyCounter() {
+    public function testArrayKeyCounter()
+    {
         $counter = new ArrayKeyCounter('test', new MockValueInterpreter());
         $resultSet = new ResultSet();
         $mockPathFinder = new MockPathFinder();
 
-        foreach($this->arrayKeyCounterFixtures as $value) {
+        foreach ($this->arrayKeyCounterFixtures as $value) {
             $mockPathFinder->value = $value;
             $counter->inspect($mockPathFinder, $resultSet);
 
@@ -85,12 +88,13 @@ class CounterTest extends \PHPUnit_Framework_TestCase{
         'c',
     ];
 
-    public function testScalarCounter() {
+    public function testScalarCounter()
+    {
         $counter = new ScalarValueCounter('test', new MockValueInterpreter());
         $resultSet = new ResultSet();
         $mockPathFinder = new MockPathFinder();
 
-        foreach($this->scalarValueCounterFixtures as $value) {
+        foreach ($this->scalarValueCounterFixtures as $value) {
             $mockPathFinder->value = $value;
             $counter->inspect($mockPathFinder, $resultSet);
 
@@ -107,10 +111,10 @@ class CounterTest extends \PHPUnit_Framework_TestCase{
         $this->assertEquals(3, $resultSet->getValues()['b']);
         $this->assertEquals(1, $resultSet->getValues()['c']);
     }
-
 }
 
-class MockPathFinder implements PathFinder {
+class MockPathFinder implements PathFinder
+{
 
     public $value;
 
@@ -139,7 +143,7 @@ class MockPathFinder implements PathFinder {
      */
     public function requireValue($path)
     {
-        if($this->value) {
+        if ($this->value) {
             return $this->value;
         }
 
@@ -147,7 +151,8 @@ class MockPathFinder implements PathFinder {
     }
 }
 
-class MockValueInterpreter implements ValueInterpreter {
+class MockValueInterpreter implements ValueInterpreter
+{
 
     /**
      * @param string $value

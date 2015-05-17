@@ -2,6 +2,7 @@
 
 
 namespace Jpietrzyk\UsageStatistics;
+
 use Jpietrzyk\UsageStatistics\Result\RawList;
 use Jpietrzyk\UsageStatistics\Result\RawListCollection;
 use Jpietrzyk\UsageStatistics\Result\RawListItem;
@@ -110,10 +111,10 @@ class ListCollector
     {
         $ret = new RawListCollection($this->getPathToCompareValue());
 
-        foreach($this->collectedData as $listName => $list) {
+        foreach ($this->collectedData as $listName => $list) {
             $listResult = new RawList($listName);
 
-            foreach($list as $name => $value) {
+            foreach ($list as $name => $value) {
                 $listResult->addItem(new RawListItem($name, $value));
             }
 
@@ -126,7 +127,8 @@ class ListCollector
     /**
      * @return string
      */
-    public function getPathToCompareValue() {
+    public function getPathToCompareValue()
+    {
         return $this->pathToComparableValue;
     }
 }

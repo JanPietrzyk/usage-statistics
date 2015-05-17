@@ -3,8 +3,8 @@
 
 namespace Jpietrzyk\UsageStatistics\Calculator;
 
-
-class Precision {
+class Precision
+{
 
     /**
      * @var int
@@ -14,14 +14,16 @@ class Precision {
     /**
      * @param $precision
      */
-    public function __construct($precision) {
+    public function __construct($precision)
+    {
         $this->precision = (int) $precision;
     }
 
     /**
      * @return int
      */
-    public function getPrecision() {
+    public function getPrecision()
+    {
         return $this->precision;
     }
 
@@ -29,8 +31,8 @@ class Precision {
      * @param float $value
      * @return string
      */
-    public function formatValue($value) {
+    public function formatValue($value)
+    {
         return number_format($value, $this->precision);
     }
-
 }

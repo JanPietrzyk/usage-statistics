@@ -56,7 +56,8 @@ class ArrayPathFinderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('TOP', $this->pathFinder->getValue('not.found', 'TOP'));
     }
 
-    public function testLike() {
+    public function testLike()
+    {
         $this->assertEquals(1, $this->pathFinder->getValue('complex.a*'));
     }
 }

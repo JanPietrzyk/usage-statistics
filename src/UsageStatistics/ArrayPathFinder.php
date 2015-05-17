@@ -80,10 +80,11 @@ class ArrayPathFinder implements PathFinder
      * @param $current
      * @return mixed
      */
-    private function findValue($key, $current) {
+    private function findValue($key, $current)
+    {
         $value = $this->findValueWithWildcard($key, $current);
 
-        if($value) {
+        if ($value) {
             return $value;
         }
 
@@ -94,15 +95,16 @@ class ArrayPathFinder implements PathFinder
         return $current[$key];
     }
 
-    private function findValueWithWildcard($key, $current) {
-        if(strpos($key, self::WILDCARD) !== strlen($key) - 1) {
+    private function findValueWithWildcard($key, $current)
+    {
+        if (strpos($key, self::WILDCARD) !== strlen($key) - 1) {
             return false;
         }
 
         $key = substr($key, 0, strlen($key) - 1);
 
-        foreach(array_keys($current) as $possibleKey) {
-            if(0 === strpos($possibleKey, $key)) {
+        foreach (array_keys($current) as $possibleKey) {
+            if (0 === strpos($possibleKey, $key)) {
                 return $current[$possibleKey];
             }
         }

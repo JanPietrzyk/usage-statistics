@@ -2,6 +2,7 @@
 
 
 namespace Jpietrzyk\UsageStatistics\Result;
+
 use Jpietrzyk\UsageStatistics\Calculator\Precision;
 
 /**
@@ -21,7 +22,8 @@ class CalculatedResultItem extends RawResultItem implements ResultItemInterface
      * @param Precision $precision
      * @param RawResultItem $item
      */
-    public function __construct($percentage, Precision $precision, RawResultItem $item) {
+    public function __construct($percentage, Precision $precision, RawResultItem $item)
+    {
         parent::__construct($item->getName(), $item->getNumberOfOccurrences());
 
         $this->precision = $precision;
@@ -31,14 +33,16 @@ class CalculatedResultItem extends RawResultItem implements ResultItemInterface
     /**
      * @return float
      */
-    public function getRawPercentage() {
+    public function getRawPercentage()
+    {
         return $this->percentage;
     }
 
     /**
      * @return string
      */
-    public function getPercentage() {
+    public function getPercentage()
+    {
         $percentage = round($this->percentage, $this->precision->getPrecision());
 
         return $this->precision->formatValue($percentage);

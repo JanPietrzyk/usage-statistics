@@ -9,7 +9,8 @@ use Jpietrzyk\UsageStatistics\Result\RawResult;
 use Jpietrzyk\UsageStatistics\Result\RawResultItem;
 use Jpietrzyk\UsageStatistics\Validator\ItemValidator;
 
-class StatisticGenerator {
+class StatisticGenerator
+{
 
     /**
      * @var CounterInterface
@@ -97,8 +98,8 @@ class StatisticGenerator {
 
         $this->counter->inspect($pathFinder, $this->resultSet);
 
-        foreach($this->resultSet->getModified() as $value) {
-           $this->notifyListCollectors($value, $pathFinder);
+        foreach ($this->resultSet->getModified() as $value) {
+            $this->notifyListCollectors($value, $pathFinder);
         }
 
         $this->inspectionCount++;
@@ -138,11 +139,10 @@ class StatisticGenerator {
         $result = new RawResult($this->inspectionCount, $this->resultSet->getInvalidCount());
 
         foreach ($this->listCollectors as $listCollector) {
-
             $result->addListCollection($listCollector->getRawResult());
         }
 
-        foreach($this->resultSet->getValues() as $name => $value) {
+        foreach ($this->resultSet->getValues() as $name => $value) {
             $result->addResultItem(new RawResultItem($name, $value));
         }
 

@@ -3,12 +3,12 @@
 
 namespace Jpietrzyk\UsageStatistics\Handler\GenerateStatistics;
 
-
 use Jpietrzyk\UsageStatistics\Counter;
 use Jpietrzyk\UsageStatistics\Loader\LoaderInterface;
 use Jpietrzyk\UsageStatistics\StatisticGenerator;
 
-class Config {
+class Config
+{
 
     /**
      * @var StatisticGenerator[]
@@ -23,14 +23,16 @@ class Config {
     /**
      * @param LoaderInterface $loader
      */
-    public function __construct(LoaderInterface $loader) {
+    public function __construct(LoaderInterface $loader)
+    {
         $this->loader = $loader;
     }
 
     /**
      * @param StatisticGenerator $generator
      */
-    public function addGenerator(StatisticGenerator $generator) {
+    public function addGenerator(StatisticGenerator $generator)
+    {
         $this->generators[] = $generator;
     }
 

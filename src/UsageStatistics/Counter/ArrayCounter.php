@@ -49,7 +49,7 @@ class ArrayCounter implements CounterInterface
             return;
         }
 
-        foreach($values as $value) {
+        foreach ($values as $value) {
             if ($this->interpreter) {
                 $value = $this->interpreter->getRealValue($value);
             }

@@ -2,6 +2,7 @@
 
 
 namespace Jpietrzyk\UsageStatistics\Calculator;
+
 use Jpietrzyk\UsageStatistics\Result\RawResultInterface;
 use Jpietrzyk\UsageStatistics\Result\CalculatedResultItem;
 use Jpietrzyk\UsageStatistics\Result\RawResultItem;
@@ -10,7 +11,8 @@ use Jpietrzyk\UsageStatistics\Result\RawResultItem;
  * Class Calculator
  * @package Jpietrzyk\UsageStatistics\Calculator
  */
-class Calculator {
+class Calculator
+{
 
     /**
      * @var RawResultInterface
@@ -47,7 +49,8 @@ class Calculator {
      * @param Precision $precision
      * @param int $combineUnder
      */
-    public function __construct(RawResultInterface $rawResult, Precision $precision, $combineUnder = 5) {
+    public function __construct(RawResultInterface $rawResult, Precision $precision, $combineUnder = 5)
+    {
         $this->rawResult = $rawResult;
         $this->combineUnder = (int) $combineUnder;
         $this->precision = $precision;
@@ -89,10 +92,10 @@ class Calculator {
         /** @var CalculatedResultItem[] $stock */
         $stock = [];
 
-        foreach($this->rawResult->getResultItems() as $rawResultItem) {
+        foreach ($this->rawResult->getResultItems() as $rawResultItem) {
             $rawPercentage = ($rawResultItem->getNumberOfOccurrences() / $this->ValidCount) * 100;
 
-            if($rawPercentage < $this->combineUnder) {
+            if ($rawPercentage < $this->combineUnder) {
                 $stock[] = new CalculatedResultItem($rawPercentage, $this->precision, $rawResultItem);
                 continue;
             }
@@ -100,7 +103,7 @@ class Calculator {
             $this->result[] = new CalculatedResultItem($rawPercentage, $this->precision, $rawResultItem);
         }
 
-        if(count($stock)) {
+        if (count($stock)) {
             $this->result[] = $this->combineStock($stock);
         }
     }
@@ -109,12 +112,13 @@ class Calculator {
      * @param CalculatedResultItem[] $stock
      * @return CalculatedResultItem
      */
-    private function combineStock(array $stock) {
+    private function combineStock(array $stock)
+    {
         $names = [];
         $percentage = 0;
         $count = 0;
 
-        foreach($stock as $stockItem) {
+        foreach ($stock as $stockItem) {
             $percentage += $stockItem->getRawPercentage();
             $names[] = $stockItem->getName();
             $count += $stockItem->getNumberOfOccurrences();

@@ -3,7 +3,6 @@
 
 namespace Jpietrzyk\UsageStatistics\Handler;
 
-
 /**
  * Class MessageResponse
  *
@@ -11,7 +10,8 @@ namespace Jpietrzyk\UsageStatistics\Handler;
  *
  * @package Jpietrzyk\UsageStatistics\Handler
  */
-class MessageResponse {
+class MessageResponse
+{
 
     /**
      * @var string[]
@@ -21,7 +21,8 @@ class MessageResponse {
     /**
      * @param string $message
      */
-    public function addMessage($message) {
+    public function addMessage($message)
+    {
         $this->messages[] = $message;
     }
 

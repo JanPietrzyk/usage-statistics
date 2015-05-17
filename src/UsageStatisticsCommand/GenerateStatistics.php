@@ -62,7 +62,8 @@ class GenerateStatistics extends Command
         );
     }
 
-    private function getKeywordGenerator($devVersionValidator) {
+    private function getKeywordGenerator($devVersionValidator)
+    {
         return new StatisticGenerator(
             new Counter\ArrayCounter(
                 'versions.dev-master.keywords'
@@ -74,7 +75,8 @@ class GenerateStatistics extends Command
         );
     }
 
-    private function getExtensionGenerator($devVersionValidator) {
+    private function getExtensionGenerator($devVersionValidator)
+    {
         return new StatisticGenerator(
             new Counter\ArrayKeyCounter(
                 'versions.dev-master.require',
@@ -87,7 +89,8 @@ class GenerateStatistics extends Command
         );
     }
 
-    private function createDefaultListCollectors() {
+    private function createDefaultListCollectors()
+    {
         return   [
             new ListCollector(
                 'name',

@@ -17,7 +17,8 @@ class PrefixStripTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException \InvalidArgumentException
      */
-    public function testInvalidFixture() {
+    public function testInvalidFixture()
+    {
         $interpreter = new PrefixStrip('ext-');
         $this->assertEquals('test-ext-curl', $interpreter->getRealValue('test-ext-curl'));
     }
@@ -25,7 +26,8 @@ class PrefixStripTest extends \PHPUnit_Framework_TestCase
    /**
      * @expectedException \InvalidArgumentException
      */
-    public function testTooShortFixture() {
+    public function testTooShortFixture()
+    {
         $interpreter = new PrefixStrip('ext-');
         $this->assertEquals('curl', $interpreter->getRealValue('curl'));
     }

@@ -3,7 +3,6 @@
 
 namespace Jpietrzyk\UsageStatistics\Result;
 
-
 class RawResult implements RawResultInterface
 {
 
@@ -31,7 +30,8 @@ class RawResult implements RawResultInterface
      * @param $packageCount
      * @param $invalidCount
      */
-    public function __construct($packageCount, $invalidCount) {
+    public function __construct($packageCount, $invalidCount)
+    {
         $this->packageCount = (int) $packageCount;
         $this->invalidCount = (int) $invalidCount;
     }
@@ -39,31 +39,35 @@ class RawResult implements RawResultInterface
     /**
      * @param RawResultItemInterface $resultItem
      */
-    public function addResultItem(RawResultItemInterface $resultItem) {
+    public function addResultItem(RawResultItemInterface $resultItem)
+    {
         $this->resultItems[] = $resultItem;
     }
 
     /**
      * @param RawListCollectionInterface $list
      */
-    public function addListCollection(RawListCollectionInterface $list) {
+    public function addListCollection(RawListCollectionInterface $list)
+    {
         $this->lists[] = $list;
     }
 
     /**
      * @return int
      */
-    public function getPackageCount() {
+    public function getPackageCount()
+    {
         return $this->packageCount;
     }
 
     /**
      * @return int
      */
-    public function getValidCount() {
+    public function getValidCount()
+    {
         $ret = 0;
 
-        foreach($this->resultItems as $item) {
+        foreach ($this->resultItems as $item) {
             $ret += $item->getNumberOfOccurrences();
         }
 
@@ -73,14 +77,16 @@ class RawResult implements RawResultInterface
     /**
      * @return int
      */
-    public function getInvalidCount() {
+    public function getInvalidCount()
+    {
         return $this->invalidCount;
     }
 
     /**
      * @return RawResultItem[]
      */
-    public function getResultItems() {
+    public function getResultItems()
+    {
         return $this->resultItems;
     }
 }

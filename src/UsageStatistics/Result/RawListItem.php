@@ -3,7 +3,6 @@
 
 namespace Jpietrzyk\UsageStatistics\Result;
 
-
 class RawListItem implements RawListItemInterface
 {
 
@@ -17,7 +16,8 @@ class RawListItem implements RawListItemInterface
      */
     private $value;
 
-    public function __construct($name, $value) {
+    public function __construct($name, $value)
+    {
         $this->name = (string) $name;
         $this->value = $value;
     }
@@ -37,7 +37,4 @@ class RawListItem implements RawListItemInterface
     {
         return $this->value;
     }
-
-
-
 }

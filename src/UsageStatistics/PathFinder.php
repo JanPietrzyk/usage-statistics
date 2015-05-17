@@ -1,7 +1,6 @@
 <?php
 namespace Jpietrzyk\UsageStatistics;
 
-
 /**
  * Class ArrayPathFinder
  *

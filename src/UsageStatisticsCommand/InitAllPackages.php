@@ -52,7 +52,7 @@ class InitAllPackages extends Command
 
             $messages = $handler->addPackage($rawPackage);
 
-            foreach($messages->getMessages() as $messages) {
+            foreach ($messages->getMessages() as $messages) {
                 $output->writeln($messages);
             }
         }

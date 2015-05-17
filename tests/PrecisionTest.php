@@ -3,12 +3,13 @@
 
 namespace Jpietrzyk\UsageStatisticsTest;
 
-
 use Jpietrzyk\UsageStatistics\Calculator\Precision;
 
-class PrecisionTest extends \PHPUnit_Framework_TestCase {
+class PrecisionTest extends \PHPUnit_Framework_TestCase
+{
 
-    public function testFormatting() {
+    public function testFormatting()
+    {
         $precision = new Precision(2);
 
         $this->assertTrue('2.00' === $precision->formatValue(2));

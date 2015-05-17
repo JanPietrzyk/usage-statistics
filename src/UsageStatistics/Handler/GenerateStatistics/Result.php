@@ -2,13 +2,15 @@
 
 
 namespace Jpietrzyk\UsageStatistics\Handler\GenerateStatistics;
+
 use Jpietrzyk\UsageStatistics\Result\RawResult;
 
 /**
  * Class Result
  * @package Jpietrzyk\UsageStatistics\Handler\GenerateStatistics
  */
-class Result {
+class Result
+{
 
     /**
      * @var array
@@ -27,7 +29,8 @@ class Result {
     /**
      * @return array
      */
-    public function get() {
+    public function get()
+    {
         return $this->result;
     }
 }
